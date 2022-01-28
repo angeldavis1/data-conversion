@@ -51,6 +51,10 @@ class[mala_nonmapping]=(0x0D00 0x0D04 0x0D0D 0x0D11 0x0D3A .. 0x0D3C\
 
 U+0964<>"."
 
+U+0907 / [deva_vowels_sign] _ <> U+0D2F U+0D3F
+U+0908 / [deva_vowels_sign] _ <> U+0D2F U+0D40
+
+
 [deva_marks] <> [mala_marks]
 [deva_vowels] <> [mala_vowels]
 [deva_cons]<>[mala_cons]
