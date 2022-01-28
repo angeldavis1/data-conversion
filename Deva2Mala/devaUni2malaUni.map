@@ -4,7 +4,7 @@
 ;   Right-hand side font = Rachana;14.25
 ;   Main Window Position = 0,0,658,713
 ;   Left-hand side Character Map Window Position = 658,0,817,447
-;   Right-hand side Character Map Window Position = 696,393,752,447
+;   Right-hand side Character Map Window Position = 696,393,752,423
 
 LHSName                 "canonical name of the 'source' encoding or left-hand side of the conversion"
 RHSName                 "canonical name of the 'target' encoding or right-hand side of the conversion"
@@ -40,19 +40,21 @@ class[mala_digits]=(0x0d66 .. 0x0d6f)
 
 class[deva_nonmapping]=(0x0900 0x0904 0x090D 0x0911 0x093A .. 0x093C\
                         0x0945 0x0949 0x094E 0x094F 0x0950 .. 0x095F\
-                        0x0964 0x0965 0x0970 ..0x097F)
+                        0x0965 0x0970 ..0x097F)
 class[mala_nonmapping]=(0x0D00 0x0D04 0x0D0D 0x0D11 0x0D3A .. 0x0D3C\
                         0x0D45 0x0D49 0x0D4E 0x0D4F 0x0D50 .. 0x0D5F\
-                        0x0D64 0x0D65 0x0D70 .. 0x0D7F)
+                        0x0D65 0x0D70 .. 0x0D7F)
 
 
 [deva_nonmapping] > 0X00B0
 0X00B0 < [mala_nonmapping]
 
+U+0964<>"."
+
 [deva_marks] <> [mala_marks]
 [deva_vowels] <> [mala_vowels]
 [deva_cons]<>[mala_cons]
-[deva_vowels_sign]<>[deva_vowels_sign]
+[deva_vowels_sign]<>[mala_vowels_sign]
 [deva_yeru]<>[mala_yeru]
 [deva_digits]<>[mala_digits]
 
