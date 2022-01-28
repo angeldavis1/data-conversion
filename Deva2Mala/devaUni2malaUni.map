@@ -1,0 +1,59 @@
+﻿; This file was created by <author> using TECkitMappingEditorU.exe v4.0.0.0 on 28-01-2022.
+;   Conversion Type = Unicode_to_from_Unicode
+;   Left-hand side font = Annapurna SIL;15.75
+;   Right-hand side font = Rachana;14.25
+;   Main Window Position = 0,0,658,713
+;   Left-hand side Character Map Window Position = 658,0,817,447
+;   Right-hand side Character Map Window Position = 696,393,752,447
+
+LHSName                 "canonical name of the 'source' encoding or left-hand side of the conversion"
+RHSName                 "canonical name of the 'target' encoding or right-hand side of the conversion"
+LHSDescription          "description for the left-hand side of the mapping"
+RHSDescription          "description for the right-hand side of the mapping"
+Version                 "1"
+Contact                 "mailto:user@addr"
+RegistrationAuthority   "the organization responsible for the encoding"
+RegistrationName        "the name and version of the mapping, as recognized by that authority"
+Copyright               "© 2022 <CompanyName>. All rights reserved."
+LHSFlags                ()
+RHSFlags                ()
+
+
+
+pass(unicode)
+
+class[deva_marks]=(0x0901 .. 0x0903)
+class[mala_marks]=(0x0d01 .. 0x0d03)
+
+class[deva_vowels]=(0x0905..0x090c 0x090e..0x0910 0x0912..0x0914)
+class[mala_vowels]=(0x0d05..0x0d0c 0x0d0e..0x0d10 0x0d12..0x0d14)
+class[deva_cons]=(0x0915 .. 0x0939)
+class[mala_cons]=(0x0d15 .. 0x0d39)
+class[deva_vowels_sign]=(0x093d .. 0x094d )
+class[mala_vowels_sign]=(0x0d3d .. 0x0d4d)
+class[deva_yeru]=(0x0960 .. 0x0963)
+class[mala_yeru]=(0x0d60 .. 0x0d63)
+class[deva_digits]=(0x0966 .. 0x096f)
+class[mala_digits]=(0x0d66 .. 0x0d6f)
+
+
+
+class[deva_nonmapping]=(0x0900 0x0904 0x090D 0x0911 0x093A .. 0x093C\
+                        0x0945 0x0949 0x094E 0x094F 0x0950 .. 0x095F\
+                        0x0964 0x0965 0x0970 ..0x097F)
+class[mala_nonmapping]=(0x0D00 0x0D04 0x0D0D 0x0D11 0x0D3A .. 0x0D3C\
+                        0x0D45 0x0D49 0x0D4E 0x0D4F 0x0D50 .. 0x0D5F\
+                        0x0D64 0x0D65 0x0D70 .. 0x0D7F)
+
+
+[deva_nonmapping] > 0X00B0
+0X00B0 < [mala_nonmapping]
+
+[deva_marks] <> [mala_marks]
+[deva_vowels] <> [mala_vowels]
+[deva_cons]<>[mala_cons]
+[deva_vowels_sign]<>[deva_vowels_sign]
+[deva_yeru]<>[mala_yeru]
+[deva_digits]<>[mala_digits]
+
+
