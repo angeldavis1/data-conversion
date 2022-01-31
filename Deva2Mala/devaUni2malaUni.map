@@ -4,7 +4,7 @@
 ;   Right-hand side font = Rachana;14.25
 ;   Main Window Position = 0,0,658,713
 ;   Left-hand side Character Map Window Position = 658,0,817,447
-;   Right-hand side Character Map Window Position = 696,393,752,423
+;   Right-hand side Character Map Window Position = 701,429,752,387
 
 LHSName                 "canonical name of the 'source' encoding or left-hand side of the conversion"
 RHSName                 "canonical name of the 'target' encoding or right-hand side of the conversion"
@@ -22,38 +22,49 @@ RHSFlags                ()
 
 pass(unicode)
 
-class[deva_marks]=(0x0901 .. 0x0903)
-class[mala_marks]=(0x0d01 .. 0x0d03)
+class[ws] =  (0x9 0xA 0xD 0x20)
+class[punct] = (0x21 .. 0x2F 0x3A .. 0x40 0x5B .. 0x60 0x7B .. 0x7F)
 
-class[deva_vowels]=(0x0905..0x090c 0x090e..0x0910 0x0912..0x0914)
-class[mala_vowels]=(0x0d05..0x0d0c 0x0d0e..0x0d10 0x0d12..0x0d14)
-class[deva_cons]=(0x0915 .. 0x0939)
-class[mala_cons]=(0x0d15 .. 0x0d39)
-class[deva_vowels_sign]=(0x093d .. 0x094d )
-class[mala_vowels_sign]=(0x0d3d .. 0x0d4d)
-class[deva_yeru]=(0x0960 .. 0x0963)
-class[mala_yeru]=(0x0d60 .. 0x0d63)
-class[deva_digits]=(0x0966 .. 0x096f)
-class[mala_digits]=(0x0d66 .. 0x0d6f)
+class[deva_marks]=(U+0901 .. U+0903)
+class[mala_marks]=(U+0d01 .. U+0d03)
 
-
-
-class[deva_nonmapping]=(0x0900 0x0904 0x090D 0x0911 0x093A .. 0x093C\
-                        0x0945 0x0949 0x094E 0x094F 0x0950 .. 0x095F\
-                        0x0965 0x0970 ..0x097F)
-class[mala_nonmapping]=(0x0D00 0x0D04 0x0D0D 0x0D11 0x0D3A .. 0x0D3C\
-                        0x0D45 0x0D49 0x0D4E 0x0D4F 0x0D50 .. 0x0D5F\
-                        0x0D65 0x0D70 .. 0x0D7F)
+class[deva_vowels]=(U+0905..U+090c U+090e..U+0910 U+0912..U+0914)
+class[mala_vowels]=(U+0d05..U+0d0c U+0d0e..U+0d10 U+0d12..U+0d14)
+class[deva_cons]=(U+0915 .. U+0939)
+class[mala_cons]=(U+0d15 .. U+0d39)
+class[deva_vowels_sign]=(U+093d .. U+094d )
+class[mala_vowels_sign]=(U+0d3d .. U+0d4d)
+class[deva_yeru]=(U+0960 .. U+0963)
+class[mala_yeru]=(U+0d60 .. U+0d63)
+class[deva_digits]=(U+0966 .. U+096f)
+class[mala_digits]=(U+0d66 .. U+0d6f)
 
 
-[deva_nonmapping] > 0X00B0
-0X00B0 < [mala_nonmapping]
+
+
+
+class[deva_nonmapping]=(U+0900 U+0904 U+090D U+0911 U+093A .. U+093C\
+                        U+0945 U+0949 U+094E U+094F U+0950 .. U+095F\
+                        U+0970 ..U+097F)
+class[mala_nonmapping]=(U+0D00 U+0D04 U+0D0D U+0D11 U+0D3A .. U+0D3C\
+                        U+0D45 U+0D49 U+0D4E U+0D4F U+0D50 .. U+0D5F\
+                        U+0D70 .. U+0D7F)
+
+
+[deva_nonmapping] > U+00B0
+U+00B0 < [mala_nonmapping]
 
 U+0964<>"."
+U+0965<>" "";"
 
 U+0907 / [deva_vowels_sign] _ <> U+0D2F U+0D3F
 U+0908 / [deva_vowels_sign] _ <> U+0D2F U+0D40
 
+;handiling 'r'
+U+0930 / [deva_cons] _ ^[deva_vowels_sign] <> U+0D7C 
+U+0930 / _ ( # | [ws] | [punct] ) <> U+0D7C
+
+U+0930 U+094D <> U+0D7C
 
 [deva_marks] <> [mala_marks]
 [deva_vowels] <> [mala_vowels]
