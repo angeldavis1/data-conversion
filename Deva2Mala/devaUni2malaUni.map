@@ -83,7 +83,7 @@ U+0928 / ( # | [ws] | [punct]) _ <> U+0D28
 U+0928 / _ [deva_vowels_sign] <> U+0D28 
 U+0928 U+094D / _ ( # | [ws] | [punct]) <> U+0D7B
 U+0928 U+094D / ( # | [ws] | [punct] ) _ ( # | [ws] | [punct]) <> U+0D28
-U+0928 U+094D U+200D U+0928<> U+0D28 U+0D4D U+0D28
+U+200D U+0928<> U+0D28
 
 
 ;handling 'la'
