@@ -38,8 +38,8 @@ class[mala_marks]=(U+0d01 .. U+0d03)
 
 class[deva_vowels]=(U+0905..U+090c U+090e..U+0910 U+0912..U+0914)
 class[mala_vowels]=(U+0d05..U+0d0c U+0d0e..U+0d10 U+0d12..U+0d14)
-class[deva_cons]=(U+0915 .. U+0939)
-class[mala_cons]=(U+0d15 .. U+0d39)
+class[deva_cons]=(U+0915 .. U+0927 U+0929 .. U+0939)
+class[mala_cons]=(U+0d15 .. U+0D27 U+0D29 .. U+0d39)
 class[deva_vowels_sign]=(U+093d .. U+094d )
 class[mala_vowels_sign]=(U+0d3d .. U+0d4d)
 class[deva_yeru]=(U+0960 .. U+0963)
@@ -74,6 +74,10 @@ U+0930 / _ ( # | [ws] | [punct] ) <> U+0D7C
 U+0930 U+094D <> U+0D7C
 
 ;handling 'na'
+U+0928 <> U+0D7B
+U+0928 U+094D <> U+0D28 U+0D4D
+U+0928 / ( # | [ws] | [punct] ) _ <> U+0D28
+U+0928 / _ [deva_vowels_sign] <> U+0D28 
 U+0928 U+094D / _ ( # | [ws] | [punct] ) <> U+0D7B
 U+0928 U+094D / ( # | [ws] | [punct] ) _ ( # | [ws] | [punct] ) <> U+0D28
 
