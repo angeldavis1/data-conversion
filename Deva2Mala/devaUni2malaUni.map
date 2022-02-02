@@ -2,9 +2,9 @@
 ;   Conversion Type = Unicode_to_from_Unicode
 ;   Left-hand side font = Annapurna SIL;15.75
 ;   Right-hand side font = Rachana;14.25
-;   Main Window Position = 0,0,658,713
+;   Main Window Position = -7,2,687,805
 ;   Left-hand side Character Map Window Position = 658,0,817,447
-;   Right-hand side Character Map Window Position = 654,388,752,387
+;   Right-hand side Character Map Window Position = 727,436,752,387
 
 LHSName                 "canonical name of the 'source' encoding or left-hand side of the conversion"
 RHSName                 "canonical name of the 'target' encoding or right-hand side of the conversion"
@@ -84,6 +84,10 @@ U+0928 / ( # | [ws] | [punct] ) _ <> U+0D28
 U+0928 / _ [deva_vowels_sign] <> U+0D28 
 U+0928 U+094D / _ ( # | [ws] | [punct] ) <> U+0D7B
 U+0928 U+094D / ( # | [ws] | [punct] ) _ ( # | [ws] | [punct] ) <> U+0D28
+U+0928 U+094D U+200D U+0928 <> U+0D7B
+
+
+
 
 ;handling 'la'
 U+0932<>U+0D7D
