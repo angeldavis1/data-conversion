@@ -18,6 +18,14 @@ Copyright               "© 2022 <CompanyName>. All rights reserved."
 LHSFlags                ()
 RHSFlags                ()
 
+pass(unicode)
+class[ws] =  (0x9 0xA 0xD 0x20)
+class[punct] = (0x21 .. 0x2F 0x3A .. 0x40 0x5B .. 0x60 0x7B .. 0x7F)
+
+class[deva_cons]=(U+0915 .. U+0939)
+;handiling 'chadhrakala'
+[deva_cons]=dc / _ ( # | [ws] | [punct] ) <> @dc U+094D
+
 
 
 pass(unicode)
@@ -63,8 +71,13 @@ U+0908 / [deva_vowels_sign] _ <> U+0D2F U+0D40
 ;handiling 'r'
 U+0930 / [deva_cons] _ ^[deva_vowels_sign] <> U+0D7C 
 U+0930 / _ ( # | [ws] | [punct] ) <> U+0D7C
-
 U+0930 U+094D <> U+0D7C
+
+;handling 'na'
+U+0928 U+094D/ _ ( # | [ws] | [punct] ) <> U+0D7B
+
+
+
 
 [deva_marks] <> [mala_marks]
 [deva_vowels] <> [mala_vowels]
@@ -73,4 +86,8 @@ U+0930 U+094D <> U+0D7C
 [deva_yeru]<>[mala_yeru]
 [deva_digits]<>[mala_digits]
 
+
+
+pass(unicode)
+" ന് " > " ന "
 
