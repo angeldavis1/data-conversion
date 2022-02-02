@@ -74,11 +74,10 @@ U+0930 / _ ( # | [ws] | [punct] ) <> U+0D7C
 U+0930 U+094D <> U+0D7C
 
 ;handling 'na'
-U+0928 U+094D/ _ ( # | [ws] | [punct] ) <> U+0D7B
+U+0928 U+094D / _ ( # | [ws] | [punct] ) <> U+0D7B
+U+0928 U+094D / ( # | [ws] | [punct] ) _ ( # | [ws] | [punct] ) <> U+0D28
 
-
-
-
+; Global conversion
 [deva_marks] <> [mala_marks]
 [deva_vowels] <> [mala_vowels]
 [deva_cons]<>[mala_cons]
