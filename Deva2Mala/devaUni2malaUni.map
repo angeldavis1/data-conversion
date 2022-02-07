@@ -4,7 +4,7 @@
 ;   Right-hand side font = Rachana;14.25
 ;   Main Window Position = 10,2,730,805
 ;   Left-hand side Character Map Window Position = 762,8,709,510
-;   Right-hand side Character Map Window Position = 916,334,788,479
+;   Right-hand side Character Map Window Position = 807,359,788,479
 
 LHSName                 "canonical name of the 'source' encoding or left-hand side of the conversion"
 RHSName                 "canonical name of the 'target' encoding or right-hand side of the conversion"
@@ -74,6 +74,9 @@ U+00B0 < [mala_nonmapping]
 
 U+0907 / [deva_vowels_sign] _ <> U+0D2F U+0D3F
 U+0908 / [deva_vowels_sign] _ <> U+0D2F U+0D40
+
+;handling a cases
+;U+090F / [deva_vowels_sign] _ <>U+0D47 U+0D2F
 
 
 ;handiling 'r'
