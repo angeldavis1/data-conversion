@@ -4,7 +4,7 @@
 ;   Right-hand side font = Rachana;14.25
 ;   Main Window Position = 10,2,730,805
 ;   Left-hand side Character Map Window Position = 763,8,708,510
-;   Right-hand side Character Map Window Position = 736,329,788,479
+;   Right-hand side Character Map Window Position = 725,539,788,479
 
 LHSName                 "canonical name of the 'source' encoding or left-hand side of the conversion"
 RHSName                 "canonical name of the 'target' encoding or right-hand side of the conversion"
@@ -48,9 +48,8 @@ pass(unicode)
 class[ws] =  (0x9 0xA 0xD 0x20)
 class[punct] = (0x21 .. 0x2F 0x3A .. 0x40 0x5B .. 0x60 0x7B .. 0x7F)
 
-class[deva_marks]=(U+0901 .. U+0903)
-class[mala_marks]=(U+0d01 .. U+0d03)
-
+class[deva_marks]=(U+0901 U+0902 U+0903)
+class[mala_marks]=(U+0d02 U+0D02 U+0d03)
 class[deva_vowels]=(U+0905..U+090c U+090e..U+0910 U+0912..U+0914)
 class[mala_vowels]=(U+0d05..U+0d0c U+0d0e..U+0d10 U+0d12..U+0d14)
 class[deva_cons]=(U+0915 .. U+0927 U+0929 ..U+0931 U+0933 ..U+0939)
@@ -62,10 +61,6 @@ class[mala_yeru]=(U+0d60 .. U+0d63)
 class[deva_digits]=(U+0966 .. U+096f)
 class[mala_digits]=(U+0d66 .. U+0d6f)
 
-
-
-
-
 class[deva_nonmapping]=(U+0900 U+0904 U+090D U+0911 U+093A .. U+093C\
                         U+0945 U+0949 U+094E U+094F U+0950 .. U+095F\
                         U+0970 ..U+097F)
@@ -75,7 +70,6 @@ class[mala_nonmapping]=(U+0D00 U+0D04 U+0D0D U+0D11 U+0D3A .. U+0D3C\
 
 [deva_nonmapping] > U+00B0
 U+00B0 < [mala_nonmapping]
-
 
 
 U+0907 / [deva_vowels_sign] _ <> U+0D2F U+0D3F
