@@ -37,7 +37,7 @@ pass(unicode)
 class[ws] =  (0x9 0xA 0xD 0x20)
 class[punct] = (0x21 .. 0x2F 0x3A .. 0x40 0x5B .. 0x60 0x7B .. 0x7F)
 
-class[deva_cons]=(U+0915 ..U+0939)
+class[deva_cons]=(U+0915 ..U+092F U+0931 ..U+0939)
 ;handiling 'chadhrakala'
 [deva_cons]=dc / _ ( # | [ws] | [punct] ) <> @dc U+094D
 
@@ -81,7 +81,7 @@ U+0930 / [deva_cons]_ ^[deva_vowels_sign] <> U+0D7C
 U+0930 / _ ( # | [ws] | [punct] ) <> U+0D7C
 U+0930 U+094D / [deva_vowels_sign]_ <> U+0D7C
 U+0930 U+094D U+092F <> U+0D30 U+0D4D U+0D2F;case when r,chandhrakala & ya comes
-;U+0930 / _ [deva_cons][deva_vowels_sign]  <>U+0D30
+U+0930 / _ [deva_cons][deva_vowels_sign]  <>U+0D30
 
 
 ;handling 'r' & 'nna'
@@ -105,8 +105,8 @@ U+0932<>U+0D7D
 U+0932 / ( # | [ws] | [punct] ) _ <> U+0D32
 U+0932 / _ [deva_vowels_sign] <> U+0D32
 U+0932 U+094D / _ ( # | [ws] | [punct] ) <> U+0D7D
-U+0932 U+094D / _ [deva_cons] <> U+0D7D ; since is more used than U+0D32
-
+U+0932 U+094D / _ [deva_cons] <> U+0D7D ; 
+U+0932 / [deva_vowels_sign] [deva_cons] _ <> U+0D7D;since is more used than U+0D32
 ;handling 'sa'
 U+0938 / _[deva_cons]  <> U+0D38 
 
