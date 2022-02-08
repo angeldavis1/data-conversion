@@ -2,9 +2,9 @@
 ;   Conversion Type = Unicode_to_from_Unicode
 ;   Left-hand side font = Annapurna SIL;15.75
 ;   Right-hand side font = Rachana;14.25
-;   Main Window Position = 10,2,730,805
-;   Left-hand side Character Map Window Position = 762,8,709,510
-;   Right-hand side Character Map Window Position = 807,359,788,479
+;   Main Window Position = 10,0,838,816
+;   Left-hand side Character Map Window Position = 1103,112,699,463
+;   Right-hand side Character Map Window Position = 811,462,725,354
 
 LHSName                 "canonical name of the 'source' encoding or left-hand side of the conversion"
 RHSName                 "canonical name of the 'target' encoding or right-hand side of the conversion"
@@ -37,7 +37,7 @@ pass(unicode)
 class[ws] =  (0x9 0xA 0xD 0x20)
 class[punct] = (0x21 .. 0x2F 0x3A .. 0x40 0x5B .. 0x60 0x7B .. 0x7F)
 
-class[deva_cons]=(U+0915 ..U+092F U+0931 ..U+0939)
+class[deva_cons]=(U+0915 ..U+092D U+0931 ..U+0939)
 ;handiling 'chadhrakala'
 [deva_cons]=dc / _ ( # | [ws] | [punct] ) <> @dc U+094D
 
@@ -71,12 +71,16 @@ class[mala_nonmapping]=(U+0D00 U+0D04 U+0D0D U+0D11 U+0D3A .. U+0D3C\
 [deva_nonmapping] > U+00B0
 U+00B0 < [mala_nonmapping]
 
+;handling vowel signs
+U+0907 / [deva_vowels_sign] _ <> U+0D2F U+0D3F;deva i is replaced by mala ya & i
+U+0908 / [deva_vowels_sign] _ <> U+0D2F U+0D40;deva ii is replaced by mala yaa & ii
+U+090F / [deva_vowels_sign] _ <> U+0D2F U+0D47 ; deva e is replaced by chandharakala and malayalam vowel sign e
+U+0905 / [deva_vowels_sign]_ <> U+0D2F;a changes to ya
+U+0906 / [deva_vowels_sign]_ <> U+0D2F U+0D3E; aa changes to yaa
+U+0909 / [deva_vowels_sign]_ <> U+0D57;u changes to mala au
+U+0913 / [deva_vowels_sign]_ <> U+0D35 U+0D4B;deva letter o is replaced by mala va & oo
+U+090A / [deva_vowels_sign]_ <> U+0D35 U+0D42;deva uu is replaced by mala va & mala vowel uu
 
-U+0907 / [deva_vowels_sign] _ <> U+0D2F U+0D3F
-U+0908 / [deva_vowels_sign] _ <> U+0D2F U+0D40
-
-;handling a cases
-;U+090F / [deva_vowels_sign] _ <>U+0D47 U+0D2F
 
 
 ;handiling 'r'
