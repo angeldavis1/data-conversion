@@ -3,8 +3,8 @@
 ;   Left-hand side font = Annapurna SIL;15.75
 ;   Right-hand side font = Rachana;14.25
 ;   Main Window Position = 10,0,838,816
-;   Left-hand side Character Map Window Position = 1103,112,699,463
-;   Right-hand side Character Map Window Position = 811,462,725,354
+;   Left-hand side Character Map Window Position = 838,10,433,463
+;   Right-hand side Character Map Window Position = 833,7,689,520
 
 LHSName                 "canonical name of the 'source' encoding or left-hand side of the conversion"
 RHSName                 "canonical name of the 'target' encoding or right-hand side of the conversion"
