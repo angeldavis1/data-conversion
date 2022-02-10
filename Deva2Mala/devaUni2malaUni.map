@@ -3,8 +3,8 @@
 ;   Left-hand side font = Annapurna SIL;15.75
 ;   Right-hand side font = Rachana;14.25
 ;   Main Window Position = 10,0,838,816
-;   Left-hand side Character Map Window Position = 838,10,700,463
-;   Right-hand side Character Map Window Position = 833,7,689,520
+;   Left-hand side Character Map Window Position = 825,0,700,463
+;   Right-hand side Character Map Window Position = 829,288,689,520
 
 LHSName                 "devanagari unicode block"
 RHSName                 "malayalam unicode block"
@@ -67,7 +67,7 @@ U+00B0 < [mala_nonmapping]
 ;handling vowel signs
 U+0907 / [deva_vowels_sign] _ <> U+0D2F U+0D3F;deva i is replaced by mala ya & i
 U+0908 / [deva_vowels_sign] _ <> U+0D2F U+0D40;deva ii is replaced by mala yaa & ii
-U+0908 / [deva_cons]_   <> malayalam_letter_ya malayalam_vowel_sign_i
+U+0908 / [deva_cons]_   <> malayalam_letter_ya malayalam_vowel_sign_i; deva ii after cons replaced by ya 
 
 U+090F / [deva_vowels_sign] _ <> U+0D2F U+0D47 ; deva e is replaced by chandharakala and malayalam vowel sign e
 U+0905 / [deva_vowels_sign]_ <> U+0D2F;a changes to ya
@@ -109,6 +109,10 @@ U+0932 / [deva_vowels_sign] [deva_cons] _ ^[deva_vowels_sign] <> U+0D7D;since is
 
 ;handling 'sa'
 U+0938 / _[deva_cons]  <> U+0D38 
+
+
+;handling 'ma'
+U+092E / _ ( # | [ws] | [punct] ) <> malayalam_sign_anusvara ; letter ma at last can be replaced by anusvara
 
 ; Global conversion
 [deva_marks] <> [mala_marks]
