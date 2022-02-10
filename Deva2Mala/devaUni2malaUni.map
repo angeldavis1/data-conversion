@@ -110,6 +110,8 @@ U+0932 / [deva_vowels_sign] [deva_cons] _ ^[deva_vowels_sign] <> U+0D7D;since is
 U+0938 <> U+0D38
 U+0938 / ( # | [ws] | [punct] ) _ <> U+0D38 
 U+0938 /[deva_cons]_ ^[deva_vowels_sign]  <> U+0D38 U+0D4D
+;U+0938 / [deva_vowels_sign] _ <>  U+0D38 U+0D4D
+U+0938 U+0902 <> U+0D38
 
 
 ;handling candhrabindhu & anusuvara
