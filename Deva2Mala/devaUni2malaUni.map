@@ -110,17 +110,17 @@ U+0932 / [deva_vowels_sign] [deva_cons] _ ^[deva_vowels_sign] <> U+0D7D;since is
 U+0938 <> U+0D38
 U+0938 / ( # | [ws] | [punct] ) _ <> U+0D38 
 U+0938 /[deva_cons]_ ^[deva_vowels_sign]  <> U+0D38 U+0D4D
-U+0938 /[deva_vowels_sign]_ <> U+0D38 U+0D4D
 
 
-;handling 'fa'
+;handling candhrabindhu & anusuvara
 U+092B U+0902 <> U+0D2B ; fa & anasuvara comes together negelect anusvara
 U+092B U+0901 <> U+0D2B ; fa & chandharabindhu comes together neglect chandhrabindhu
-
+U+0906 U+0901 <> U+0D06 
 
 
 ;handling 'ma'
 U+092E / _ ( # | [ws] | [punct] ) <> malayalam_sign_anusvara ; letter ma at last can be replaced by anusvara
+
 
 ; Global conversion
 [deva_marks] <> [mala_marks]
