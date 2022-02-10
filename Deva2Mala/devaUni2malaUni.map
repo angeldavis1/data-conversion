@@ -3,8 +3,8 @@
 ;   Left-hand side font = Annapurna SIL;15.75
 ;   Right-hand side font = Rachana;14.25
 ;   Main Window Position = 10,0,838,816
-;   Left-hand side Character Map Window Position = 825,0,700,463
-;   Right-hand side Character Map Window Position = 829,288,689,520
+;   Left-hand side Character Map Window Position = 887,0,638,463
+;   Right-hand side Character Map Window Position = 895,470,622,520
 
 LHSName                 "devanagari unicode block"
 RHSName                 "malayalam unicode block"
@@ -27,7 +27,6 @@ class[deva_nukta]= (U+093C)
 
 pass(unicode)
 U+093C > ; this will cause the NUKTA to be deleted from the output
-
 pass(unicode)
 class[ws] =  (0x9 0xA 0xD 0x20)
 class[punct] = (0x21 .. 0x2F 0x3A .. 0x40 0x5B .. 0x60 0x7B .. 0x7F)
@@ -45,8 +44,8 @@ class[deva_marks]=(U+0901 U+0902 U+0903)
 class[mala_marks]=(U+0d02 U+0D02 U+0d03)
 class[deva_vowels]=(U+0905..U+090c U+090e..U+0910 U+0912..U+0914)
 class[mala_vowels]=(U+0d05..U+0d0c U+0d0e..U+0d10 U+0d12..U+0d14)
-class[deva_cons]=(U+0915 .. U+0927 U+0929 ..U+0931 U+0933 ..U+0939)
-class[mala_cons]=(U+0d15 .. U+0D27 U+0D29 .. U+0d31 U+0d33 .. U+0d39)
+class[deva_cons]=(U+0915 .. U+0927 U+0929 ..U+0931 U+0933 ..U+0937 U+0939)
+class[mala_cons]=(U+0d15 .. U+0D27 U+0D29 .. U+0d31 U+0d33 .. U+0d37 U+0D39 )
 class[deva_vowels_sign]=(U+093d .. U+094d )
 class[mala_vowels_sign]=(U+0d3d .. U+0d4d)
 class[deva_yeru]=(U+0960 .. U+0963)
@@ -108,8 +107,12 @@ U+0932 / [deva_vowels_sign] [deva_cons] _ ^[deva_vowels_sign] <> U+0D7D;since is
 
 
 ;handling 'sa'
-U+0938 / _[deva_cons]  <> U+0D38 
+U+0938 <> U+0D38
+U+0938 / ( # | [ws] | [punct] ) _ <> U+0D38 
+U+0938 /_ [deva_cons] <> U+0D38 U+0D4D
 
+;handling anuvasara
+U+092B U+0902 <> U+0D2B
 
 ;handling 'ma'
 U+092E / _ ( # | [ws] | [punct] ) <> malayalam_sign_anusvara ; letter ma at last can be replaced by anusvara
