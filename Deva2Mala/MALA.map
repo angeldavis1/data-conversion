@@ -1,0 +1,122 @@
+﻿; This file was created by <author> using TECkitMappingEditorU.exe v4.0.0.0 on 08-02-2022.
+;   Conversion Type = Legacy_to_from_Unicode
+;   Left-hand side font = MLW-TTRevathi;15.75
+;   Right-hand side font = Rachana;14.25
+;   Main Window Position = 15,21,737,795
+;   Left-hand side Character Map Window Position = 741,15,675,464
+;   Right-hand side Character Map Window Position = 818,387,718,429
+
+EncodingName            "a canonical name that uniquely identifies this mapping table from all others"
+DescriptiveName         "a string that describes the mapping"
+Version                 "1"
+Contact                 "mailto:user@addr"
+RegistrationAuthority   "the organization responsible for the encoding"
+RegistrationName        "the name and version of the mapping, as recognized by that authority"
+Copyright               "© 2022 <CompanyName>. All rights reserved."
+LHSFlags                ()
+RHSFlags                ()
+
+
+pass(Byte_Unicode)
+byteclass[vowels] = (41 .. 48)
+uniclass[vowels]= (U+0D05 .. U+0D07 U+0D09 U+0D0B U+0D0E U+0D0F U+0D12)
+[vowels] <> [vowels]
+
+byteclass[consonants] = (49 0X4A.. 0X5C ) 
+uniclass[consonants] = (U+0D15 U+0D16.. U+0D28)
+[consonants]<>[consonants]
+
+byteclass[vowel_signs] = (0x6D 0X6E 0X6F 0X70 0X71 0X72 0X73 0X74  0X79 0X75 0X76 0X77)
+uniclass[vowel_signs] = (U+0D3E U+0D3F U+0D40 U+0D41 U+0D42 U+0D43 U+0D46 U+0D47\
+                         U+0D44 U+0D57 U+0D4D U+0D4E)
+[vowel_signs] <> [vowel_signs] 
+
+byteclass[ws]=(0x9 0xA 0xD 0x20)
+uniclass[ws]=(0x9 0xA 0xD 0x20)
+[ws]<>[ws]
+
+byteclass[punct]= (0x21 .. 0x2F 0x3A .. 0x40 0x5B .. 0x60 0x7B .. 0x7F)
+uniclass[punct]=(0x21 .. 0x2F 0x3A .. 0x40 0x5B .. 0x60 0x7B .. 0x7F)
+[punct]<>[punct]
+
+byteclass[digits] = (30 .. 39)
+uniclass[digits] = (U+0D66 ..U+0D6F)
+
+;handling chillakasgragal
+0xAC <> malayalam_letter_chillu_nn
+0xB3 <> malayalam_letter_chillu_n
+0xC0 <> malayalam_letter_chillu_rr
+0xF0 <> malayalam_letter_chillu_l
+0xC4 <> malayalam_letter_chillu_ll
+
+;handling kootaksharam
+0XE5 <> malayalam_letter_nnna
+0xA1 <> malayalam_letter_ka malayalam_sign_virama malayalam_letter_ka
+0xA2 <> malayalam_letter_ka malayalam_sign_virama malayalam_letter_la
+0xA3 <> malayalam_letter_ka malayalam_sign_virama malayalam_letter_ssa
+0xA4 <> malayalam_letter_ga malayalam_sign_virama malayalam_letter_ga
+0xA5 <> malayalam_letter_ga malayalam_sign_virama malayalam_letter_la
+0xA6 <> malayalam_letter_nga malayalam_sign_virama malayalam_letter_ka
+0xA7 <> malayalam_letter_nga malayalam_sign_virama malayalam_letter_nga
+0xA8 <> malayalam_letter_ca malayalam_sign_virama malayalam_letter_ca
+0xAA <> malayalam_letter_nya malayalam_sign_virama malayalam_letter_nya
+0xAB <> malayalam_letter_tta malayalam_sign_virama malayalam_letter_tta
+0xAE <> malayalam_letter_nna malayalam_sign_virama malayalam_letter_nna
+0xAF <> malayalam_letter_ta malayalam_sign_virama malayalam_letter_ta
+0xB0 <> malayalam_letter_ta malayalam_sign_virama malayalam_letter_tha
+0xB1 <> malayalam_letter_da malayalam_sign_virama malayalam_letter_da
+0XB2 <> malayalam_letter_da malayalam_sign_virama malayalam_letter_dha
+0XB4 <> malayalam_letter_na malayalam_sign_virama malayalam_letter_ta
+0xB5 <> malayalam_letter_na malayalam_sign_virama malayalam_letter_da
+0xB8 <> malayalam_letter_pa malayalam_sign_virama malayalam_letter_pa
+0xB9 <> malayalam_letter_pa malayalam_sign_virama malayalam_letter_la
+0xBA <> malayalam_letter_ba malayalam_sign_virama malayalam_letter_ba
+0xBB <> malayalam_letter_ba malayalam_sign_virama malayalam_letter_ba
+0xBC <> malayalam_letter_ma malayalam_sign_virama malayalam_letter_pa
+0xBD <> malayalam_letter_ma malayalam_sign_virama malayalam_letter_ma
+0xBE <> malayalam_letter_ma malayalam_sign_virama malayalam_letter_la
+0xBF <> malayalam_letter_ya malayalam_sign_virama malayalam_letter_ya
+0xc1 <> malayalam_letter_rra malayalam_letter_rra
+0xC5 <> malayalam_letter_lla malayalam_sign_virama malayalam_letter_lla
+0xc6 <> malayalam_letter_va malayalam_sign_virama malayalam_letter_va
+0xC7 <> malayalam_letter_sha malayalam_sign_virama malayalam_letter_la
+0xc8 <> malayalam_letter_sha malayalam_sign_virama malayalam_letter_sha
+0xc9 <> malayalam_letter_sa malayalam_sign_virama malayalam_letter_la
+0xCA <> malayalam_letter_sa malayalam_sign_virama malayalam_letter_sa
+0xCB <> malayalam_letter_ha malayalam_sign_virama malayalam_letter_la
+0xCC <> malayalam_letter_sa malayalam_sign_virama malayalam_letter_rra malayalam_sign_virama malayalam_letter_rra
+0xCD <> malayalam_letter_dda malayalam_sign_virama malayalam_letter_dda
+0xCE <> malayalam_letter_ka malayalam_sign_virama malayalam_letter_tta
+0xCF <> malayalam_letter_ba malayalam_sign_virama malayalam_letter_dha
+0XD0 <> malayalam_letter_ba malayalam_sign_virama malayalam_letter_da
+0xD1 <> malayalam_letter_ca malayalam_sign_virama malayalam_letter_cha
+0xD2 <> malayalam_letter_pa malayalam_sign_virama malayalam_letter_ma
+0xD3 <> malayalam_letter_ha malayalam_sign_virama malayalam_letter_na
+0xD4 <> malayalam_letter_na malayalam_sign_virama malayalam_letter_dha
+0xD5 <> malayalam_letter_ta malayalam_sign_virama malayalam_letter_sa
+0xD6 <> malayalam_letter_ja malayalam_sign_virama malayalam_letter_ja
+0xD7 <> malayalam_letter_nna malayalam_sign_virama malayalam_letter_ma
+0XD8 <> malayalam_letter_sa malayalam_sign_virama malayalam_letter_tha
+0xD9 <> malayalam_letter_na malayalam_sign_virama malayalam_letter_ta
+0xDA <> malayalam_letter_ja malayalam_sign_virama malayalam_letter_nya
+0xDB <> malayalam_letter_ta malayalam_sign_virama malayalam_letter_bha
+0xDC <> malayalam_letter_ga malayalam_sign_virama malayalam_letter_ma
+0xDD <> malayalam_letter_sha malayalam_sign_virama malayalam_letter_ca
+0xDE <> malayalam_letter_nna malayalam_sign_virama malayalam_letter_dda
+0xDF <> malayalam_letter_ta malayalam_sign_virama malayalam_letter_ma
+0xE0 <> malayalam_letter_ka malayalam_sign_virama malayalam_letter_ta
+0xE1 <> malayalam_letter_ga malayalam_sign_virama malayalam_letter_na
+0xE2 <> malayalam_letter_chillu_n malayalam_sign_virama malayalam_letter_rra
+0xE3 <> malayalam_letter_ssa malayalam_sign_virama malayalam_letter_tta
+0xE4 <> malayalam_letter_rra malayalam_sign_virama malayalam_letter_rra
+0xEF <> malayalam_letter_nna malayalam_sign_virama malayalam_letter_tta
+0xF1 <> malayalam_letter_la malayalam_sign_virama malayalam_letter_la
+0xF2 <> malayalam_letter_na malayalam_sign_virama malayalam_letter_ma
+0xf3 <> malayalam_letter_na malayalam_sign_virama malayalam_letter_na
+0xF4 <> malayalam_letter_nya malayalam_sign_virama malayalam_letter_ca
+    
+
+
+
+
+
