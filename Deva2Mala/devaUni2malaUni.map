@@ -102,7 +102,9 @@ U+0932 / ( # | [ws] | [punct] ) _ <> U+0D32
 U+0932 / _ [deva_vowels_sign] <> U+0D32
 U+0932 U+094D / _ ( # | [ws] | [punct] ) <> U+0D7D
 U+0932 U+094D / _ [deva_cons] <> U+0D7D ; 
-U+0932 / [deva_vowels_sign] [deva_cons] _ <> U+0D7D;since is more used than U+0D32
+U+0932 / [deva_vowels_sign] [deva_cons] _ ^[deva_vowels_sign] <> U+0D7D;since is more used than U+0D32
+
+
 ;handling 'sa'
 U+0938 / _[deva_cons]  <> U+0D38 
 
