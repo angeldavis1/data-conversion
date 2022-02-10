@@ -31,7 +31,7 @@ pass(unicode)
 class[ws] =  (0x9 0xA 0xD 0x20)
 class[punct] = (0x21 .. 0x2F 0x3A .. 0x40 0x5B .. 0x60 0x7B .. 0x7F)
 
-class[deva_cons]=(U+0915 ..U+092D U+0931 ..U+0939)
+class[deva_cons]=(U+0915 ..U+092D U+0931 .. U+0934 U+0936 .. U+0939)
 ;handiling 'chadhrakala'
 [deva_cons]=dc / _ ( # | [ws] | [punct] ) <> @dc U+094D
 
@@ -109,11 +109,12 @@ U+0932 / [deva_vowels_sign] [deva_cons] _ ^[deva_vowels_sign] <> U+0D7D;since is
 ;handling 'sa'
 U+0938 <> U+0D38
 U+0938 / ( # | [ws] | [punct] ) _ <> U+0D38 
-U+0938 /_ [deva_cons] <> U+0D38 U+0D4D
+;U+0938 /_ [deva_cons] <> U+0D38 U+0D4D
 
 ;handling 'fa'
 U+092B U+0902 <> U+0D2B ; fa & anasuvara comes together negelect anusvara
 U+092B U+0901 <> U+0D2B ; fa & chandharabindhu comes together neglect chandhrabindhu
+
 
 
 ;handling 'ma'
