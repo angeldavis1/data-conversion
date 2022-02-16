@@ -72,7 +72,7 @@ U+090F / [deva_vowels_sign] _ <> U+0D2F U+0D47 ; deva e is replaced by chandhara
 U+0905 / [deva_vowels_sign]_ <> U+0D2F;a changes to ya
 U+0906 / [deva_vowels_sign]_ <> U+0D2F U+0D3E; aa changes to yaa
 U+0909 / [deva_vowels_sign]_ <> U+0D57;u changes to mala au
-U+0913 / [deva_vowels_sign]_ <> U+0D35 U+0D4B;deva letter o is replaced by mala va & oo
+devanagari_letter_o / _( # | [ws] | [punct] ) <> malayalam_letter_va malayalam_vowel_sign_oo
 U+090A / [deva_vowels_sign]_ <> U+0D35 U+0D42;deva uu is replaced by mala va & mala vowel uu
 
 ;handiling 'r'
