@@ -3,8 +3,8 @@
 ;   Left-hand side font = Annapurna SIL;15.75
 ;   Right-hand side font = Rachana;14.25
 ;   Main Window Position = 10,0,838,816
-;   Left-hand side Character Map Window Position = 887,0,638,463
-;   Right-hand side Character Map Window Position = 895,470,622,346
+;   Left-hand side Character Map Window Position = 830,0,706,463
+;   Right-hand side Character Map Window Position = 844,406,692,410
 
 LHSName                 "devanagari unicode block"
 RHSName                 "malayalam unicode block"
@@ -44,8 +44,8 @@ class[deva_marks]=(U+0901 U+0902 U+0903)
 class[mala_marks]=(U+0d02 U+0D02 U+0d03)
 class[deva_vowels]=(U+0905..U+090c U+090e..U+0910 U+0912..U+0914)
 class[mala_vowels]=(U+0d05..U+0d0c U+0d0e..U+0d10 U+0d12..U+0d14)
-class[deva_cons]=(U+0915 .. U+0927 U+0929 ..U+0931 U+0933 ..U+0937 U+0939)
-class[mala_cons]=(U+0d15 .. U+0D27 U+0D29 .. U+0d31 U+0d33 .. U+0d37 U+0D39 )
+class[deva_cons]=(U+0915 .. U+0927 U+0929 ..U+092D U+092F U+0933.. U+0937 U+0939 )
+class[mala_cons]=(U+0d15 .. U+0D27 U+0D29 .. U+0D2D  U+0D2F U+0D33.. U+0d37 U+0D39)
 class[deva_vowels_sign]=(U+093d .. U+094d )
 class[mala_vowels_sign]=(U+0d3d .. U+0d4d)
 class[deva_yeru]=(U+0960 .. U+0963)
@@ -76,12 +76,13 @@ U+0913 / [deva_vowels_sign]_ <> U+0D35 U+0D4B;deva letter o is replaced by mala 
 U+090A / [deva_vowels_sign]_ <> U+0D35 U+0D42;deva uu is replaced by mala va & mala vowel uu
 
 ;handiling 'r'
+U+0930 <> U+0D30
 U+0930 U+094D <> U+0D7C
 U+0930 / [deva_cons]_ ^[deva_vowels_sign] <> U+0D7C 
 U+0930 / _ ( # | [ws] | [punct] ) <> U+0D7C
 U+0930 U+094D / [deva_vowels_sign]_<> U+0D7C
 U+0930 U+094D U+092F <> U+0D30 U+0D4D U+0D2F;case when r,chandhrakala & ya comes
-U+0930 / _ [deva_vowels_sign][deva_cons] <>U+0D7C
+U+0930 / _ [deva_cons] [deva_vowels_sign]<>U+0D7C
 
 
 ;handling 'r' & 'nna'
@@ -114,7 +115,7 @@ U+0938 / ( # | [ws] | [punct] ) _ <> U+0D38
 ;U+0938 /[deva_cons]_ ^[deva_vowels_sign]  <> U+0D38 U+0D4D
 ;U+0938 / [deva_vowels] _ <>  U+0D38 U+0D4D
 U+0938 U+0902 <> U+0D38
-U+0932 / [deva_vowels_sign] [deva_cons] _ <> malayalam_letter_sa
+U+0938 / [deva_vowels_sign] [deva_cons] _ <> malayalam_letter_sa
 U+0938 /_[deva_cons] <> U+0D38 U+0D4D
 
 
@@ -126,14 +127,16 @@ U+0906 U+0901 <> U+0D06
 
 
 ;handling 'ma'
-U+092E / _ ( # | [ws] | [punct] ) <> malayalam_sign_anusvara ; letter ma at last can be replaced by anusvara
-
-
+U+092E <> U+0D2E
+U+092E / _ [deva_vowels_sign] <> U+0D2E
+U+092E /_ ( # | [ws] | [punct]) <> U+0D2E U+0D4D
+U+092E U+094D / _[deva_cons] <> malayalam_sign_anusvara
 ; Global conversion
 [deva_marks] <> [mala_marks]
 [deva_vowels] <> [mala_vowels]
 [deva_cons]<>[mala_cons]
 [deva_vowels_sign]<>[mala_vowels_sign]
+
 [deva_yeru]<>[mala_yeru]
 [deva_digits]<>[mala_digits]
 
